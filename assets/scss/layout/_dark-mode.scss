@@ -1,0 +1,452 @@
+@use "../utils" as *;
+
+[data-theme="dark"] {
+    header {
+        .navbar-header {
+            .logo {
+            display: none;
+            }
+            .logo-dark {
+            display: block !important;
+            }
+        }
+        .menu-logo {
+            display: none;
+        }
+        .menu-logo-dark {
+            display: block;
+        }
+    }
+    .home-banner-two {
+        background: #0d1520;
+        .banner-title {
+            h1 {
+            color: var(--gray-900);
+            }
+            p {
+            color: var(--gray-900);
+            }
+        }
+    }
+    .support-section {
+        background: #0d1520;
+        .support-item h5 {
+        color: var(--gray-900);
+        }
+    }
+    .btn-primary, .btn-secondary, .btn-white {
+        color: var(--gray-900);
+        &:hover {
+            color: var(--gray-900);
+        }
+    }
+    .listing-nav-2 .nav-item .nav-link {
+        &.active {
+            color: var(--gray-900);
+        }
+        &:hover {
+            color: var(--gray-900);
+        }
+    }
+    .exclusive-benifit-section {
+        background: #0d1520;
+        .section-title-2 {
+            h2 {
+                color: var(--gray-900);
+            }
+        }
+        .benifit-item {
+            &:hover {
+                background: #051321;
+            }
+            h5 {
+                color: var(--gray-900);
+            }
+            p {
+                color: var(--gray-900);
+            }
+        }
+    }
+    footer .join-sec {
+        background: #0d1520;
+        h2 {
+            color: var(--gray-900);
+        }
+        p {
+            color: var(--gray-900);
+        }
+    }
+    .modal {
+        .modal-content {
+            background: var(--white);
+            border-color: var(--gray-100);
+        }
+    }
+    .work-section .section-title-2 {
+        h2,p {
+            color: var(--gray-900);
+        }
+        
+    }
+    .partner-slider-two .partner-logo img {
+        filter: invert(1);
+    }
+    .blog-item-two .blog-content h5 a {
+        color: var(--gray-900);
+    }
+    @include respond-above(lg) {
+        .header {
+            &.header-three {
+                .main-menu-wrapper .main-nav > li > a {
+                    color: var(--gray-900);
+                }
+                &.nav-fixed {
+                    .main-menu-wrapper .main-nav > li > a {
+                        color: var(gray-900);
+                    }
+                }
+                .header-items {
+                    .topbar-link {
+                        i {
+                            color: var(--gray-900);
+                        }
+                    }
+                }
+                .logo-dark {
+                    display: none !important;
+                }
+                .logo {
+                    display: block;
+                }
+            }
+        }
+    }
+    @include respond-below(lg) {
+        .header-three {
+            .navbar-header {
+                .logo {
+                    display: block !important;
+                }
+                .logo-dark {
+                    display: none !important;
+                }
+            }
+        }
+    }
+    .banner-section-three {
+        .banner-content {
+            .banner-badge {
+                p {
+                    color: var(--gray-900);
+                }
+            }
+            h1,p {
+                color: var(--gray-900);
+            }
+        } 
+        .banner-card {
+            .card-info p,.rate-info{
+                color: var(--gray-900);
+            }
+            .card-info {
+                p {
+                    span {
+                        background: var(--gray-900);
+                        i {
+                            color: var(--white);
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    .work-card .work-card-icon h5 {
+        color: var(--white);
+    }
+    .location-item .bottom-text {
+        h5,p {
+            color: var(--gray-900);
+        }
+    }
+    .about-us-section {
+        background-color: #0d1520;
+    }
+    .how-it-work-section {
+        background: #0d1520;
+    }
+    .success-stories-section {
+        background: #0d1520;
+    }
+    .partners-logos {
+        background: var(--light);
+    }
+    .contact-field {
+        background: #0d1520;
+    }
+    footer.footer-dark {
+        background: #0d1520;
+        .footer-title {
+            color: var(--gray-900);
+        }
+        .footer-middle .contact-info {
+            p,h6 {
+                color: var(--gray-900); 
+            }
+        }
+        .footer-bottom {
+            border-color: var(--gray-100);
+            .copy-right {
+                color: var(--gray-900); 
+            }
+        }
+    }
+    .breadcrumb-bar {
+        background: #0d1520;
+        .breadcrumb-title {
+            color: var(--gray-900); 
+        }
+        .breadcrumb-item {
+            color: var(--gray-900); 
+            a {
+               color: var(--gray-900);  
+            }
+            &.active {
+                color: var(--gray-900); 
+            }
+        }
+        .breadcrumb-arrow {
+            .breadcrumb-item + .breadcrumb-item::before {
+                color: var(--gray-900); 
+            }
+        }
+    }
+    .custom-breadcrumb-bar {
+        background: transparent;
+    }
+    .buy-details-item .buy-social-icons-items a {
+        color: var(--gray-900); 
+    }
+    .buy-details-header-item {
+        header {
+            .logo-dark {
+                display: block;
+            }
+            .main-menu-wrapper {
+                .main-nav {
+                    li {
+                        a {
+                            color: var(--gray-900);
+                        }
+                    }
+                }
+            }
+            .header-items {
+                .custom-btn-light {
+                    background-color:var(--white)FFF33 ;
+                    backdrop-filter: blur(14px);
+                    border:none;
+                    color: var(--gray-900) !important;
+                }
+            }
+        }
+        header.fixed {
+            .main-menu-wrapper {
+                .main-nav {
+                    li {
+                        a {
+                            color: var(--gray-900);
+                        }
+                    }
+                }
+            }
+            .logo {
+                display: none !important;
+            }
+            .logo-dark {
+                display: block !important;
+            }
+        }
+    }
+    .about-us-item-03 {
+        h2,h5,p {
+            color: var(--gray-900);
+        }
+    }
+    .about-us-item-04 {
+        .card {
+            img {
+                filter: invert(1);
+            }
+        }
+    }
+    .table {
+        background: var(--white);
+        --bs-table-bg: var(--white);
+    }
+    .invoice-logo {
+        .logo-dark {
+            display: inline-block !important;
+        }
+        .logo {
+            display: none;
+        }
+    }
+    .table {
+        td,th {
+            border-color: var(--gray-100);
+            color: var(--gray-900);
+        }
+    }
+    .card {
+        p {
+            color: var(--gray-500);
+        }
+    }
+    .blog-item-02 .blog-content-02 {
+        h5 a,p {
+            color: var(--gray-900);
+        }
+    }
+    .email-forms button {
+        color: var(--gray-900);
+    }
+    footer.footer-three .footer-middle .contact-info span {
+        color: var(--gray-900);
+    }
+    .property-type-item {
+        .property-img .overlay-arrow i {
+            color: var(--gray-900);
+        }
+    }
+    .location-item .bottom-text .arrow-overlay a:hover {
+        color: var(--gray-900);
+    }
+    .property-item .arrow-overlay a:hover {
+        color: var(--gray-900);
+    }
+    .rent-property-item .property-img .token i {
+        color: var(--gray-900) !important;
+    }
+    .badge-icon {
+        color: var(--gray-900);
+    }
+    .buy-property-items p i,.service-area p span {
+        color: var(--gray-900);
+    }
+    .bookmark-sideright-ribbone-primary-right {
+        span {
+            color: var(--gray-900);
+        }
+    }
+    .search-item .grid-list-view .active {
+        color: var(--gray-900);
+    }
+    footer .social-icon a:hover {
+        color: var(--gray-900);
+    }
+    .cart-item-wrap .cart-item-03 .btn.btn-success {
+        color: var(--gray-900);
+    }
+    .cart-item-wrap .cart-item-01 .cart-item-02 .cart-content-01 .quantity-input {
+        color: var(--gray-900);
+    }
+    .author-details {
+        span {
+            color: var(--gray-500);
+        }
+    }
+    .blog-carousel-wrapper {
+        .slick-arrow {
+            color: var(--gray-900);
+            &:hover {
+               color: var(--gray-900) !important; 
+            }
+        }
+    }
+    .mark-all-btn {
+        color: var(--gray-900) !important;
+    }
+    .delete-all-btn {
+        color: var(--gray-900) !important;
+    }
+    .delete-btn {
+        &:hover {
+            color: var(--gray-900) !important;
+        }
+    }
+    .bg-dark {
+        background: #3E3E3E !important;
+    }
+    .text-light {
+        color: var(--gray-900) !important;
+    }
+    .btn-danger {
+        color: var(--gray-900) !important;
+    }
+    .add-btn,.minus-btn {
+        color: var(--gray-900) !important;
+    }
+    .theiaStickySidebar {
+        .card-body {
+            ul {
+                li {
+                    color: var(--gray-900);
+                }
+            }
+        }
+    }
+    .review-items .reply-btn {
+        color: var(--gray-900);
+    }
+    .Home-banner-section .home-search-1 .nav .nav-link.active {
+        color: var(--gray-900);
+    }
+    .property-card-item img {
+        filter: brightness(100);
+    }
+    .buy-property.bg-white {
+        background: var(--white) !important;
+        .arrow {
+             color: var(--gray-900) !important;
+        }
+    }
+    .cities-section .city-items-slide .city-item h5 {
+        color: var(--gray-900);
+    }
+    .cities-section .city-items-slide .city-item p {
+        color: var(--gray-900);
+    }
+    .partners-section .partners-items img {
+        filter: invert(1);
+    }
+    .testimonials-section {
+        background-color: #0d1520;
+    }
+    .pricing-plan-section {
+        .pricing-item-02 {
+            &:hover {
+                h4 ,h6 ,p ,h2 , hr {
+                    color: var(--gray-900);
+                    span {
+                        color: var(--gray-900);
+                    }
+                }
+            }
+        }
+    }
+    footer.footer-dark .footer-widget h5 {
+        color: var(--gray-900);
+    }
+    footer.footer .footer-about p,footer.footer-dark .footer-bottom p {
+        color: var(--gray-900);
+    }
+    .dropdown-menu .dropdown-item.active {
+        color: var(--gray-900);
+    }
+    .pricing-item-01 .nav.nav-tabs .nav-item .nav-link.active {
+        color: var(--gray-900);
+    }
+    .form-control.bg-white {
+        background: var(--form-bg) !important;
+    }
+}

@@ -1,0 +1,15 @@
+@use '../utils/' as *;
+
+
+.favourite {
+  i {
+    color: var(--dark);
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &.filled {
+      color: #FD3752;
+    }
+  }
+}
+
