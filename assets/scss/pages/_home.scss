@@ -29,3 +29,35 @@
         }
     }
 }
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    min-width: 112px;
+    .yacht-feature-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #F2F7F6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-right: 5px;
+        img {
+            width: auto;
+        }
+    }
+    h6 {
+        font-size: 14px;
+        span {
+            color: #676767;
+        }
+    }
+}
+.bg-onefracxn {
+    background: #DAD4BE;
+}
+.text-onefracxn {
+    color: #3E3E3E;
+}

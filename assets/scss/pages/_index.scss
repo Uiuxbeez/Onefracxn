@@ -146,7 +146,7 @@
     .property-item {
         box-shadow: unset;
         .property-card-item {
-            padding: 40px ;
+            padding: 5px ;
             background: var(--white);
             border-radius: $border-radius-xxl;
             text-align: center;
@@ -567,24 +567,30 @@
 // partnres section
 
 .partners-section {
-    
     .partners-slide {
-        margin: 0px 12px;
+        margin: 0 24px;
     }
     .partners-items {
-        width: 100%;
-        max-width: 200px;
         background: var(--light);
         border-radius: $border-radius-xxl;
         text-align: center;
-        padding: 20px;
-        
+        padding: 16px 18px;
+        min-height: 100px;
+        display: flex;
+        margin: auto 12px;
+        align-items: center;
+        justify-content: center;
+
         img {
-            width: auto;
+            width: 167px;
+            max-width: 100%;
+            max-height: 66px;
+            height: auto;
+            object-fit: contain;
             margin: auto;
+            display: block;
         }
     }
-
 }
 
 // testimonial section

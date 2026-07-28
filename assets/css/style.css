@@ -171,9 +171,9 @@ header {
   --primary: #3E3E3E;
   --primary-rgb: 62, 62, 62;
   --primary-dark: rgb(52.7, 52.7, 52.7);
-  --secondary: #6842EF;
-  --secondary-rgb: 104, 66, 239;
-  --secondary-dark: rgb(88.4, 56.1, 203.15);
+  --secondary: #B7B899;
+  --secondary-rgb: 183, 184, 153;
+  --secondary-dark: rgb(155.55, 156.4, 130.05);
   --dark: #3E3E3E;
   --dark-rgb: 62, 62, 62;
   --dark-dark: rgb(52.7, 52.7, 52.7);
@@ -4726,6 +4726,41 @@ span.select2-container.select2-container--default.select2-container--open {
   color: var(--primary);
 }
 
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  min-width: 112px;
+}
+li .yacht-feature-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #F2F7F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 5px;
+}
+li .yacht-feature-icon img {
+  width: auto;
+}
+li h6 {
+  font-size: 14px;
+}
+li h6 span {
+  color: #676767;
+}
+
+.bg-onefracxn {
+  background: #DAD4BE;
+}
+
+.text-onefracxn {
+  color: #3E3E3E;
+}
+
 .Home-banner-section {
   display: flex;
   align-items: center;
@@ -4872,7 +4907,7 @@ span.select2-container.select2-container--default.select2-container--open {
   box-shadow: unset;
 }
 .home-property-section .property-item .property-card-item {
-  padding: 40px;
+  padding: 5px;
   background: var(--white);
   border-radius: 10px;
   text-align: center;
@@ -5268,19 +5303,27 @@ span.select2-container.select2-container--default.select2-container--open {
 }
 
 .partners-section .partners-slide {
-  margin: 0px 12px;
+  margin: 0 24px;
 }
 .partners-section .partners-items {
-  width: 100%;
-  max-width: 200px;
   background: var(--light);
   border-radius: 10px;
   text-align: center;
-  padding: 20px;
+  padding: 16px 18px;
+  min-height: 100px;
+  display: flex;
+  margin: auto 12px;
+  align-items: center;
+  justify-content: center;
 }
 .partners-section .partners-items img {
-  width: auto;
+  width: 167px;
+  max-width: 100%;
+  max-height: 66px;
+  height: auto;
+  object-fit: contain;
   margin: auto;
+  display: block;
 }
 
 .testimonials-section {
@@ -7542,7 +7585,7 @@ span.select2-container.select2-container--default.select2-container--open {
   content: "";
   height: 4px;
   width: 38px;
-  background: linear-gradient(90deg, #03BD9D 0%, #03BD9D 46%, #6842EF 46.03%, #6842EF 100%);
+  background: linear-gradient(90deg, #03BD9D 0%, #03BD9D 46%, #B7B899 46.03%, #B7B899 100%);
   bottom: -8px;
   right: 50%;
 }
