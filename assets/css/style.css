@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /****** Utils ******/
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 header {
@@ -5040,6 +5041,26 @@ li h6 span {
 .features-section .feature-slider-item .features-slide-card {
   margin: 0px 12px;
 }
+.features-section .feature-slider-item .features-slide-card > .d-flex {
+  align-items: stretch;
+  height: 100%;
+}
+.features-section .feature-slider-item .features-slide-card .property-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.features-section .feature-slider-item .features-slide-card .property-listing-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.features-section .feature-slider-item .features-slide-card .buy-grid-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 @media (max-width: 575.98px) {
   .features-section .feature-slider-item {
     margin-bottom: 0px;
@@ -5112,6 +5133,40 @@ li h6 span {
     top: -32px;
     right: 44px;
   }
+}
+.features-section .property-listing-item:not(.featured-property) {
+  position: relative;
+  overflow: hidden;
+}
+.features-section .property-listing-item:not(.featured-property)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2;
+}
+.features-section .property-listing-item:not(.featured-property)::after {
+  content: "🔒 Coming Soon";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .cities-section {
@@ -5234,6 +5289,13 @@ li h6 span {
     max-width: 100% !important;
   }
 }
+.statistics-section .statistics-item img,
+.statistics-section .statistics-item svg {
+  width: 77px;
+}
+.statistics-section .statistics-item svg.stat-icon-draw {
+  overflow: visible;
+}
 .statistics-section .custom-element-img-1 {
   position: absolute;
   right: 45px;
@@ -5247,6 +5309,23 @@ li h6 span {
   transform: rotateY(180deg);
 }
 
+html.js-draw-anim .statistics-section .stat-icon-draw path {
+  fill-opacity: 0;
+  transition: stroke-dashoffset 1.2s ease, fill-opacity 0.5s ease;
+}
+
+html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
+  stroke-dashoffset: 0;
+  fill-opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-draw-anim .statistics-section .stat-icon-draw path {
+    stroke-dashoffset: 0 !important;
+    fill-opacity: 1 !important;
+    transition: none !important;
+  }
+}
 .buy-property-section .buy-property-item {
   width: 100%;
   max-width: 416px;
