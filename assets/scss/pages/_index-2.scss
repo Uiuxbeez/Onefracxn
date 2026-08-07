@@ -146,7 +146,7 @@
         padding: 0 8px;
         margin-bottom: 4px;
         span {
-            color: var(--primary);
+            color: #DAD4BE;
         }
     }
     .title-square {
@@ -275,7 +275,6 @@
 
 .support-section {
     padding: 20px;
-    transform: rotate(0.82deg);
     background: var(--dark);
 }
 
@@ -432,18 +431,18 @@
     transition: 0.5s all;
     &:hover {
         transform: translateY(-10px);
-        background: var(--gray-900);
+        background: #B7B899;
     }
     .benifit-icon {
         width: 56px;
         height: 56px;
         border-radius: 50%;
         font-size: 24px;
-        color: var(--primary);
+        color: #DAD4BE;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0px 4px 4px 0px #132522 inset;
+        box-shadow: 0px 2px 2px 0px #DAD4BE inset;
         margin-bottom: 16px;
         i {
             font-size: 24px;

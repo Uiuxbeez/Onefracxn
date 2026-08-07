@@ -3382,6 +3382,10 @@ button:focus {
   color: var(--primary) !important;
 }
 
+.bg-onfracxn {
+  background-color: #DAD4BE;
+}
+
 .form-control {
   border-color: var(--input-border);
   color: var(--gray-900);
@@ -4731,7 +4735,6 @@ li {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
-  min-width: 112px;
 }
 li .yacht-feature-icon {
   width: 32px;
@@ -5829,7 +5832,7 @@ html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
   margin-bottom: 4px;
 }
 .section-title-2 h2 span {
-  color: var(--primary);
+  color: #DAD4BE;
 }
 .section-title-2 .title-square {
   width: 7px;
@@ -5955,7 +5958,6 @@ html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
 }
 .support-section {
   padding: 20px;
-  transform: rotate(0.82deg);
   background: var(--dark);
 }
 
@@ -6127,18 +6129,18 @@ html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
 }
 .benifit-item:hover {
   transform: translateY(-10px);
-  background: var(--gray-900);
+  background: #B7B899;
 }
 .benifit-item .benifit-icon {
   width: 56px;
   height: 56px;
   border-radius: 50%;
   font-size: 24px;
-  color: var(--primary);
+  color: #DAD4BE;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 4px 0px #132522 inset;
+  box-shadow: 0px 2px 2px 0px #DAD4BE inset;
   margin-bottom: 16px;
 }
 .benifit-item .benifit-icon i {
@@ -8227,9 +8229,6 @@ html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
 .buy-details-header-item header {
   background: transparent;
 }
-.buy-details-header-item header .logo-dark {
-  display: block !important;
-}
 .buy-details-header-item header .logo {
   display: none;
 }
@@ -8237,10 +8236,10 @@ html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
   color: var(--white);
 }
 .buy-details-header-item header .main-menu-wrapper .main-nav li a:hover {
-  color: var(--primary);
+  color: var(--secondary);
 }
 .buy-details-header-item header .main-menu-wrapper .main-nav li.active a {
-  color: var(--primary);
+  color: var(--secondary);
 }
 .buy-details-header-item header .header-items .custom-btn-light {
   background-color: var(--white) FFF33;
@@ -8264,9 +8263,6 @@ html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
 .buy-details-header-item header.fixed .logo-dark {
   display: none !important;
 }
-.buy-details-header-item header.fixed .logo {
-  display: block !important;
-}
 .buy-details-header-item header.fixed .main-menu-wrapper .main-nav li a {
   color: var(--gray-900);
 }
@@ -8287,6 +8283,9 @@ html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
 }
 .buy-details-header-item header.fixed .main-nav .has-submenu.active a {
   color: var(--primary);
+}
+.buy-details-header-item header.fixed .logo h4 {
+  color: var(--gray-900) !important;
 }
 
 .whishlist-item {

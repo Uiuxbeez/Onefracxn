@@ -548,9 +548,6 @@
     background-size: 100%;
     header {
         background: transparent;
-        .logo-dark {
-            display: block !important;
-        }
         .logo {
             display: none;
         }
@@ -560,12 +557,12 @@
                     a {
                         color: var(--white);
                         &:hover {
-                            color: var(--primary);
+                            color: var(--secondary);
                         }
                     }
                     &.active {
                         a {
-                            color: var(--primary);
+                            color: var(--secondary);
                         }
                     }
                 }
@@ -599,9 +596,6 @@
         .logo-dark {
             display: none !important;
         }
-        .logo {
-            display: block !important;
-        }
         .main-menu-wrapper {
             .main-nav {
                 li {
@@ -629,6 +623,11 @@
                 a {
                     color: var(--primary);
                 }
+            }
+        }
+        .logo {
+            h4 {
+                color: var(--gray-900) !important;
             }
         }
     }
