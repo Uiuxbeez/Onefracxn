@@ -1698,7 +1698,7 @@ footer.footer-three .footer-bottom .copy-right {
   color: var(--light);
 }
 footer.footer-two {
-  background: var(--light);
+  background: rgba(183, 184, 153, 0.2);
   z-index: 1;
 }
 footer.footer-two::before {
@@ -4770,6 +4770,7 @@ li h6 span {
   align-items: center;
   padding: 60px 0 80px;
   background-image: url(../img/new-home/banner-shadow.png);
+  background-color: #F8F5EB;
   background-position: left 0 bottom 0px;
   background-repeat: no-repeat;
   background-size: 0px auto;
@@ -4888,14 +4889,24 @@ li h6 span {
   }
 }
 
+.bg-theme {
+  background: rgba(183, 184, 153, 0.2);
+}
+
 .how-work-section .howit-work-item {
   box-shadow: 0px 0px 24px 0px rgba(197, 197, 197, 0.25);
   border-radius: 10px;
   padding: 24px;
-  transition: all 0.5s;
+  transition: all 0.3s;
+  background: var(--white);
 }
 .how-work-section .howit-work-item:hover {
   transform: translateY(-10px);
+  background-color: #B7B899;
+  color: #ffffff;
+}
+.how-work-section .howit-work-item:hover h5 {
+  color: #ffffff;
 }
 
 .home-property-section {
@@ -5426,6 +5437,7 @@ html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
   background: var(--white);
   border-radius: 10px;
   padding: 20px;
+  margin: 0px 12px;
   text-align: center;
 }
 .testimonials-section .testimonials-slider-item .testimonials-slide .testimonials-item h6 {

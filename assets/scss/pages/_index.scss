@@ -6,6 +6,7 @@
     align-items: center;
     padding: 60px 0 80px;
     background-image: url(../img/new-home/banner-shadow.png);
+    background-color: #F8F5EB;
     background-position: left 0 bottom 0px;
     background-repeat: no-repeat;
     background-size: 0px auto;
@@ -120,6 +121,9 @@
     }
 }
 
+.bg-theme {
+    background: rgba(183, 184, 153, 0.2);
+}
 
 .how-work-section {
 
@@ -127,9 +131,15 @@
         box-shadow: $box-shadow-sm;
         border-radius:$border-radius-xxl ;
         padding: 24px;
-        transition: all 0.5s;
+        transition: all 0.3s;
+        background: var(--white);
         &:hover {
             transform: translateY(-10px);
+            background-color: #B7B899;
+            color: #ffffff;
+            h5 {
+                color: #ffffff;
+            }
         }
     }
 }
@@ -704,6 +714,7 @@ html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
                 background: var(--white);
                 border-radius: $border-radius-xxl;
                 padding: 20px;
+                margin: 0px 12px;
                 text-align: center;
                     
                 h6 {

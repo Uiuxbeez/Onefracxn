@@ -137,8 +137,8 @@ footer {
                 }
             }
         }        
-        &.footer-two {
-            background: var(--light);
+            &.footer-two {
+            background: rgba(183, 184, 153, 0.2);
             z-index: 1;
             &::before {
                 position: absolute;
