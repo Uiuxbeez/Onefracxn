@@ -5809,7 +5809,7 @@ html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
 .counting-item {
   box-shadow: 0px 0px 24px 0px rgba(197, 197, 197, 0.25);
   padding: 20px;
-  background: var(--white);
+  background: rgba(183, 184, 153, 0.2);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -5820,14 +5820,14 @@ html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
   transform: translateY(-10px);
 }
 .counting-item .count-icon {
-  width: 63px;
-  height: 63px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--light);
-  border-radius: 2px;
-  margin-right: 16px;
+  background: var(--secondary);
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
 .section-title-2 {
@@ -6142,6 +6142,13 @@ html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
 .benifit-item:hover {
   transform: translateY(-10px);
   background: #B7B899;
+}
+.benifit-item:hover .benifit-icon {
+  color: #3E3E3E;
+  box-shadow: 0px 2px 2px 0px #3E3E3E inset;
+}
+.benifit-item:hover h5, .benifit-item:hover p {
+  color: #3E3E3E;
 }
 .benifit-item .benifit-icon {
   width: 56px;
@@ -7933,6 +7940,7 @@ html.js-draw-anim .statistics-section .stat-icon-draw.is-drawn path {
   display: flex;
   align-items: center;
   width: 48%;
+  font-size: 23px;
 }
 .buy-details-item .custom-btn a i {
   line-height: 0px;
