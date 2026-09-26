@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
 :root {
   font-family: "DM Sans", sans-serif;
-  color: #183d34;
-  background: #fcfcf8;
+  color: #051321;
+  background: #f7f8fa;
   font-synthesis: none;
-  --green: #173f35;
-  --lime: #dcf3a2;
-  --muted: #6b7770;
-  --border: #dce3da;
+  --green: #3e3e3e;
+  --lime: #b7b899;
+  --muted: #5d6772;
+  --border: #e2e4e6;
 }
 * {
   box-sizing: border-box;
@@ -26,7 +26,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #608243;
+  color: #8f906f;
 }
 button,
 .button {
@@ -47,7 +47,7 @@ button,
 }
 button:hover,
 .button:hover {
-  background: #2a5847;
+  background: #2f2f2f;
   color: #fff;
 }
 button:disabled {
@@ -73,7 +73,7 @@ button.danger {
   color: #a32929;
 }
 :focus-visible {
-  outline: 3px solid #92ad4c;
+  outline: 3px solid #b7b899;
   outline-offset: 4px;
 }
 h1,
@@ -114,10 +114,10 @@ select,
 textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #cfd8ce;
+  border: 1px solid #e2e4e6;
   border-radius: 6px;
   background: white;
-  color: #173f35;
+  color: #051321;
   margin-top: 7px;
 }
 textarea {
@@ -149,7 +149,7 @@ legend {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #5b705b;
+  color: #5d6772;
   margin: 0 0 20px;
 }
 .site-header {
@@ -159,7 +159,7 @@ legend {
   justify-content: space-between;
   padding: 0 4%;
   gap: 20px;
-  background: #fcfcf8;
+  background: #f7f8fa;
 }
 .brand {
   font-size: 21px;
@@ -687,7 +687,7 @@ progress {
   padding-bottom: 100px;
 }
 footer {
-  background: #173f35;
+  background: #3e3e3e;
   color: white;
   padding: 70px 0 0;
 }
@@ -772,10 +772,10 @@ footer small {
   display: grid;
   grid-template-columns: 245px minmax(0, 1fr);
   min-height: 100vh;
-  background: #f3f5ef;
+  background: #f7f8fa;
 }
 .admin-sidebar {
-  background: #173f35;
+  background: #3e3e3e;
   color: #e6ecdf;
   padding: 35px 22px;
   position: sticky;
@@ -807,8 +807,8 @@ footer small {
   padding: 13px;
 }
 .admin-sidebar nav button.active {
-  background: #dbefa4;
-  color: #173f35;
+  background: #b7b899;
+  color: #3e3e3e;
 }
 .admin-sidebar > a:not(.brand) {
   font-size: 12px;
@@ -826,7 +826,7 @@ footer small {
   justify-content: space-between;
   gap: 20px;
   align-items: center;
-  background: #fcfcf8f2;
+  background: #f7f8faf2;
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(12px);
 }
@@ -1041,8 +1041,8 @@ footer small {
   flex-wrap: wrap;
 }
 .preview {
-  background: #fcfcf8;
-  border: 2px solid #9bac78;
+  background: #f7f8fa;
+  border: 2px solid #b7b899;
   margin: 20px 0;
   overflow: hidden;
 }
@@ -1156,8 +1156,8 @@ footer small {
     left: 0;
     right: 0;
     top: 76px;
-    background: #fcfcf8;
-    box-shadow: 0 15px 20px #173f3520;
+    background: #f7f8fa;
+    box-shadow: 0 15px 20px #3e3e3e20;
     padding: 25px;
     align-items: stretch;
   }
