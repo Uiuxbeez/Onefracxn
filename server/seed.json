@@ -1,0 +1,452 @@
+{
+  "settings": {
+    "listingsTitle": "Our properties",
+    "listingsDescription": "Extraordinary spaces. A fraction to call your own.",
+    "brand": "ONE FRACXN",
+    "tagline": "A fraction of a property. A world of possibilities.",
+    "email": "",
+    "phone": "",
+    "address": "",
+    "footerTitle": "Ready to Start Your Investment Journey!",
+    "footerBody": "Explore a different way to own extraordinary places."
+  },
+  "home": {
+    "eyebrow": "THOUGHTFUL OWNERSHIP. EXTRAORDINARY PLACES.",
+    "title": "Invest, Earn and Grow",
+    "description": "Start your real estate investment journey with premium holiday homes. Enjoy passive income, capital growth, and exclusive vacation stays.",
+    "image": "/assets/img/new-home/banner-image.png",
+    "showcaseTitle": "Open for Investments",
+    "showcaseDescription": "Discover your next property. Choose a fraction that fits your vision.",
+    "sections": [
+      {
+        "id": "section-2",
+        "title": "How It Works",
+        "body": "Follow these 3 steps to book your place",
+        "image": "",
+        "visible": true,
+        "items": [
+          {
+            "title": "01. Explore Properties",
+            "body": "Browse our curated collection of premium holiday homes",
+            "image": ""
+          },
+          {
+            "title": "02. Choose Your Fraction",
+            "body": "Invest in the holiday home you love, one fraction at a time.",
+            "image": ""
+          },
+          {
+            "title": "03. Earn & Relax",
+            "body": "Receive rental income, benefit from property appreciation, and enjoy",
+            "image": ""
+          }
+        ]
+      },
+      {
+        "id": "section-5",
+        "title": "Want tailor this more for a specific niche",
+        "body": "",
+        "image": "",
+        "visible": true,
+        "items": [
+          {
+            "title": "Ratings 5.0",
+            "body": "",
+            "image": ""
+          },
+          {
+            "title": "Search for Location",
+            "body": "Search by location, category, budget, and amenities. Find listings that match your needs—whether it's a home, office, or land.",
+            "image": ""
+          },
+          {
+            "title": "Select Property Type",
+            "body": "Choose from modern apartments, spacious houses, stylish condos, or commercial spaces that meet your specific needs.",
+            "image": ""
+          },
+          {
+            "title": "Book Your Property",
+            "body": "Select your preferred property type, provide your details, and confirm your booking in just a few easy steps.",
+            "image": ""
+          }
+        ]
+      },
+      {
+        "id": "section-7",
+        "title": "We are here too",
+        "body": "Every day, we build trust through communication, transparency, and results.",
+        "image": "",
+        "visible": true,
+        "items": [
+          {
+            "title": "",
+            "body": "",
+            "image": "/assets/img/icons/ads-1.png"
+          },
+          {
+            "title": "",
+            "body": "",
+            "image": "/assets/img/icons/ads-2.png"
+          },
+          {
+            "title": "",
+            "body": "",
+            "image": "/assets/img/icons/ads-3.png"
+          },
+          {
+            "title": "",
+            "body": "",
+            "image": "/assets/img/icons/ads-4.png"
+          },
+          {
+            "title": "",
+            "body": "",
+            "image": "/assets/img/icons/ads-5.png"
+          }
+        ]
+      },
+      {
+        "id": "section-8",
+        "title": "Testimonials",
+        "body": "What our happy client says",
+        "image": "",
+        "visible": true,
+        "items": [
+          {
+            "title": "Lily Brooks",
+            "body": "Booking our dream home was incredibly easy with OneFracxn The interface was user-friendly",
+            "image": "/assets/img/users/user-02.jpg"
+          },
+          {
+            "title": "Daniel Cooper",
+            "body": "OneFracxn made home booking a breeze. Super easy and stress-free! listing Portal of all time",
+            "image": "/assets/img/users/user-01.jpg"
+          },
+          {
+            "title": "Karen Maria",
+            "body": "From browsing to booking, everything felt effortless great design, clear information.",
+            "image": "/assets/img/users/user-03.jpg"
+          },
+          {
+            "title": "John Carter",
+            "body": "Inding the perfect home was a breeze. The platform was smooth, intuitive, and made experience.",
+            "image": "/assets/img/users/user-04.jpg"
+          },
+          {
+            "title": "Daniel Cooper",
+            "body": "OneFracxn made home booking a breeze. Super easy and stress-free! listing Portal of all time",
+            "image": "/assets/img/users/user-06.jpg"
+          }
+        ]
+      },
+      {
+        "id": "section-9",
+        "title": "In the News",
+        "body": "Every day, we build trust through communication, transparency, and results.",
+        "image": "",
+        "visible": true,
+        "items": [
+          {
+            "title": "",
+            "body": "",
+            "image": "/assets/img/icons/news-1.png"
+          },
+          {
+            "title": "",
+            "body": "",
+            "image": "/assets/img/icons/news-2.svg"
+          },
+          {
+            "title": "",
+            "body": "",
+            "image": "/assets/img/icons/news-3.png"
+          },
+          {
+            "title": "",
+            "body": "",
+            "image": "/assets/img/icons/news-4.png"
+          },
+          {
+            "title": "",
+            "body": "",
+            "image": "/assets/img/icons/news-5.png"
+          }
+        ]
+      },
+      {
+        "id": "section-10",
+        "title": "Discover the Advantages & Exclusive Benefits",
+        "body": "",
+        "image": "",
+        "visible": true,
+        "items": [
+          {
+            "title": "Verified Listings",
+            "body": "All properties are thoroughly checked to ensure authenticity and avoid time-wasting.",
+            "image": ""
+          },
+          {
+            "title": "Wide Reach",
+            "body": "Access thousands of listings across top cities, towns, and emerging locations.",
+            "image": ""
+          },
+          {
+            "title": "Direct Communication",
+            "body": "Connect instantly with sellers, agents, or property managers—no middlemen.",
+            "image": ""
+          },
+          {
+            "title": "Expert Guidance",
+            "body": "Receive professional insights to make informed real estate decisions confidently.",
+            "image": ""
+          },
+          {
+            "title": "Tailored Solutions",
+            "body": "We customize property options based on your specific needs and preferences.",
+            "image": ""
+          },
+          {
+            "title": "Seamless Process",
+            "body": "Enjoy a smooth, stress-free experience from property search to final transaction.",
+            "image": ""
+          }
+        ]
+      },
+      {
+        "id": "section-11",
+        "title": "Our Team",
+        "body": "Meet the talented individuals behind our success.",
+        "image": "",
+        "visible": true,
+        "items": [
+          {
+            "title": "Seth Franklin",
+            "body": "CEO",
+            "image": "/assets/img/users/user-01.jpg"
+          },
+          {
+            "title": "Carol Currie",
+            "body": "Marketing Head",
+            "image": "/assets/img/users/user-02.jpg"
+          },
+          {
+            "title": "Daniel Morenoo",
+            "body": "Marketing Head",
+            "image": "/assets/img/users/user-04.jpg"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is real estate?",
+        "answer": "Real estate refers to land and any permanent structures on it, such as homes or buildings."
+      },
+      {
+        "question": "What types of properties are included in real estate?",
+        "answer": "Real estate includes residential, commercial, industrial, land, and special-purpose properties."
+      },
+      {
+        "question": "What is the role of a real estate agent?",
+        "answer": "A real estate agent assists clients in buying, selling, or renting properties by guiding them through the process."
+      },
+      {
+        "question": "How do I start the home-buying process?",
+        "answer": "Start the home-buying process by checking your budget, getting pre approved for a mortgage, and consulting a real estate agent."
+      },
+      {
+        "question": "How much down payment do I need?",
+        "answer": "The down payment typically ranges from 3% to 20% of the home's price, depending on the loan type and lender requirements."
+      },
+      {
+        "question": "What is a home inspection?",
+        "answer": "A home inspection is a professional evaluation of a property's condition to identify any issues before finalizing the purchase."
+      }
+    ]
+  },
+  "pages": [
+    {
+      "slug": "why-onefracxn",
+      "title": "Why OneFracxn",
+      "description": "Discover the advantages of fractional property ownership.",
+      "published": true,
+      "sections": [
+        {
+          "id": "why",
+          "title": "More possibilities. Shared ownership.",
+          "body": "Explore premium holiday homes, choose your fraction, and let a professionally managed property become part of your journey.",
+          "image": "/assets/img/home/bg/faq-img.jpg",
+          "visible": true,
+          "items": [
+            {
+              "title": "Professionally Managed",
+              "body": "Expert guidance throughout your property journey.",
+              "image": ""
+            },
+            {
+              "title": "Rental Income",
+              "body": "Explore properties with rental potential.",
+              "image": ""
+            },
+            {
+              "title": "Complimentary Stays",
+              "body": "Discover the stay benefits available with each property.",
+              "image": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "how-it-works",
+      "title": "How It Works",
+      "description": "Your journey to shared property ownership.",
+      "published": true,
+      "sections": [
+        {
+          "id": "section-2",
+          "title": "How It Works",
+          "body": "Follow these 3 steps to book your place",
+          "image": "",
+          "visible": true,
+          "items": [
+            {
+              "title": "01. Explore Properties",
+              "body": "Browse our curated collection of premium holiday homes",
+              "image": ""
+            },
+            {
+              "title": "02. Choose Your Fraction",
+              "body": "Invest in the holiday home you love, one fraction at a time.",
+              "image": ""
+            },
+            {
+              "title": "03. Earn & Relax",
+              "body": "Receive rental income, benefit from property appreciation, and enjoy",
+              "image": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "title": "Let’s find your next property",
+      "description": "Tell us what you have in mind. Our team will get in touch.",
+      "published": true,
+      "sections": []
+    }
+  ],
+  "properties": [
+    {
+      "id": "skanda-1",
+      "slug": "skanda-1",
+      "title": "Skanda-1",
+      "location": "Poonamallee, Chennai, India",
+      "type": "Apartment",
+      "status": "Live",
+      "published": true,
+      "price": "₹1Lac",
+      "priceSuffix": "/ Fraction",
+      "totalFractions": 50,
+      "availableFractions": 41,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "area": "",
+      "description": "This property is mostly wooded and sits high on a hilltop overlooking the Mohawk River Valley.Located right in the heart of Upstate NYs Amish farm Country, this land is certified organic makingit extremely rare! Good road frontage on a paved county road with utilities make it an amazingsetting for your dream country getaway! If you like views, you must see this property!This propertyis mostly wooded and sits high on a hilltop overlooking the Mohawk River Valley.\n\nLocated right inthe heart of Upstate NYs Amish farm Country, this land is certified organic making it extremelyrare! Good road frontage on a paved county road with utilities make it an amazing setting for yourdream country getaway! If you like views, you must see this property!",
+      "about": "This property is mostly wooded and sits high on a hilltop overlooking the Mohawk River Valley.\n\n100 meters from school. 3km away from bypass.\n\nFirst floor - 2 large bedrooms with attached bathrooms.\n\nSpacious and well-Equipped kitchen.\n\nInviting living room with balcony.\n\nTerrace with breathtaking views.\n\nIndependent electric and water connections.",
+      "amenities": [
+        "Gym",
+        "Swimming Pool",
+        "Power Backup",
+        "Clubhouse",
+        "Visitor Parking",
+        "Natural Light",
+        "Airy Rooms",
+        "Spacious Interior"
+      ],
+      "gallery": [
+        "/assets/img/buy/buy-slide-img-1.jpg",
+        "/assets/img/buy/buy-slide-img-2.jpg",
+        "/assets/img/buy/buy-slide-img-3.jpg",
+        "/assets/img/buy/buy-slide-img-4.jpg",
+        "/assets/img/buy/buy-slide-img-5.jpg",
+        "/assets/img/buy/buy-slide-img-6.jpg"
+      ],
+      "cover": "/assets/img/buy/buy-grid-img-01.jpg",
+      "floorPlan": "/assets/img/gallery/floor-plan.jpeg",
+      "videoUrl": "https://www.youtube.com/embed/AWovHEZcpQU",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Poonamallee%20Chennai",
+      "targetIrr": "16%",
+      "rentalYield": "6–8%",
+      "possession": "Aug 2026",
+      "coOwnPrice": "₹5,30,272",
+      "bookingAmount": "₹1,16,820",
+      "pricing": [
+        {
+          "label": "Base Selling Price",
+          "total": "35,00,000",
+          "fraction": "3,18,181"
+        },
+        {
+          "label": "GST",
+          "total": "1,75,000",
+          "fraction": "15,909"
+        },
+        {
+          "label": "Stamp Duty and Registration",
+          "total": "2,80,000",
+          "fraction": "25,454"
+        },
+        {
+          "label": "Furnishing Cost",
+          "total": "8,00,000",
+          "fraction": "72,727"
+        },
+        {
+          "label": "Conveyance Fees",
+          "total": "5,39,000",
+          "fraction": "49,000"
+        },
+        {
+          "label": "Facilitation Charges",
+          "total": "5,39,000",
+          "fraction": "49,000"
+        },
+        {
+          "label": "Total",
+          "total": "58,33,000",
+          "fraction": "5,30,272"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Does offer free cancellation for a full refund?",
+          "answer": "Does have fully refundable room rates available to book on our site. If you’ve booked a fully refundable room rate, this can be cancelled up to a few days before check-in depending on the property's cancellation policy. Just make sure to check this property's cancellation policy for the exact terms and conditions."
+        },
+        {
+          "question": "Is there a pool?",
+          "answer": "Yes, there is a pool available for guests, providing a perfect place to relax, unwind, and enjoy some leisure time during their stay."
+        },
+        {
+          "question": "Are pets allowed?",
+          "answer": "Yes, pets are allowed, and we welcome your furry friends to stay with you, ensuring a comfortable experience for both you and your pets."
+        },
+        {
+          "question": "Is airport shuttle service offered?",
+          "answer": "Yes, airport shuttle service is offered to provide convenient and reliable transportation for our guests between the airport and their destination, ensuring a smooth and stress-free travel experience."
+        },
+        {
+          "question": "What are the check-in and check-out times?",
+          "answer": "Check-in is typically from 12:00 PM, and check-out is usually by 11:00 AM to ensure a smooth transition for all guests."
+        }
+      ],
+      "metaTitle": "Skanda-1 | OneFracxn",
+      "metaDescription": "Explore Skanda-1 in Poonamallee, Chennai.",
+      "internalNotes": "Imported from original skanda.html. Review before launch: description mentions New York; homepage bedrooms differ; fraction price, co-own price and cost breakdown differ. Original source retained in legacy/. Repeated homepage cards are the same property, not distinct listings."
+    }
+  ],
+  "featuredIds": [
+    "skanda-1"
+  ]
+}
