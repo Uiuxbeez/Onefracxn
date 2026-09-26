@@ -31,11 +31,11 @@ export const propertySchema = z
     id: slug,
     slug,
     title: short.min(1),
-    location: short.min(1),
+    location: short,
     type: short.min(1),
     status: z.enum(["Live", "Coming soon", "Sold out"]),
     published: z.boolean(),
-    price: short.min(1),
+    price: short,
     priceSuffix: short,
     totalFractions: z.number().int().min(1).max(1000000),
     availableFractions: z.number().int().min(0),
@@ -66,7 +66,13 @@ export const propertySchema = z
   .refine(
     (p) => p.availableFractions <= p.totalFractions,
     "Available fractions cannot exceed total fractions",
-  );
+  )
+  .superRefine((p, ctx) => {
+    if (p.published && !p.location.trim())
+      ctx.addIssue({ code: "custom", path: ["location"], message: "Required for published properties" });
+    if (p.published && !p.price.trim())
+      ctx.addIssue({ code: "custom", path: ["price"], message: "Required for published properties" });
+  });
 export const contentSchema = z
   .object({
     settings: z.object({
