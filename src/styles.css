@@ -175,6 +175,11 @@ legend {
   height: 38px;
   object-fit: contain;
 }
+.brand img {
+  width: 33px;
+  height: 38px;
+  object-fit: contain;
+}
 .site-header nav {
   display: flex;
   align-items: center;
@@ -788,6 +793,10 @@ footer small {
 .admin-sidebar .brand {
   font-size: 19px;
 }
+.admin-sidebar .brand img {
+  width: 28px;
+  height: 32px;
+}
 .admin-sidebar .eyebrow {
   font-size: 9px;
   color: #9dae9f;
@@ -971,6 +980,80 @@ footer small {
   width: 200px;
   object-fit: cover;
   border-radius: 6px;
+}
+.crop-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #05132199;
+}
+.crop-dialog {
+  width: min(560px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 20px 60px #05132140;
+}
+.crop-dialog h2 {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+.crop-dialog p {
+  font-size: 13px;
+}
+.crop-canvas {
+  display: block;
+  width: min(100%, 480px);
+  aspect-ratio: 1;
+  margin: 18px auto;
+  background: #e2e4e6;
+  cursor: grab;
+  touch-action: none;
+}
+.crop-canvas:active {
+  cursor: grabbing;
+}
+.crop-dialog .actions {
+  justify-content: flex-end;
+  margin-bottom: 0;
+}
+.rich-editor {
+  margin-top: 7px;
+  border: 1px solid #e2e4e6;
+  border-radius: 6px;
+  overflow: hidden;
+  background: white;
+}
+.rich-toolbar {
+  display: flex;
+  gap: 4px;
+  padding: 5px;
+  border-bottom: 1px solid #e2e4e6;
+  background: #f7f8fa;
+}
+.rich-toolbar button {
+  min-width: 32px;
+  padding: 6px 8px;
+  color: var(--green);
+}
+.rich-input {
+  min-height: 130px;
+  padding: 12px;
+  outline: 0;
+  line-height: 1.7;
+}
+.rich-input:focus {
+  box-shadow: inset 0 0 0 2px #b7b899;
+}
+.rich-input a {
+  color: #347ea8;
+  text-decoration: underline;
 }
 .upload-label {
   color: var(--muted);

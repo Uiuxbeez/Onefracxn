@@ -71,9 +71,78 @@ const newProperty = () => {
     internalNotes: "",
   };
 };
+function CropDialog({ file, onComplete, onCancel }) {
+  const canvasRef = React.useRef(null),
+    [image, setImage] = useState(null),
+    [zoom, setZoom] = useState(1),
+    [position, setPosition] = useState({ x: 0, y: 0 }),
+    drag = React.useRef(null);
+  useEffect(() => {
+    const url = URL.createObjectURL(file), image = new Image();
+    image.onload = () => setImage(image);
+    image.src = url;
+    return () => URL.revokeObjectURL(url);
+  }, [file]);
+  useEffect(() => {
+    if (!image || !canvasRef.current) return;
+    const canvas = canvasRef.current,
+      context = canvas.getContext("2d"),
+      size = 720,
+      scale = Math.max(size / image.width, size / image.height) * zoom,
+      width = image.width * scale,
+      height = image.height * scale,
+      x = (size - width) / 2 + position.x,
+      y = (size - height) / 2 + position.y;
+    canvas.width = size;
+    canvas.height = size;
+    context.clearRect(0, 0, size, size);
+    context.drawImage(image, x, y, width, height);
+  }, [image, zoom, position]);
+  function move(e) {
+    if (!drag.current) return;
+    setPosition({
+      x: drag.current.x + e.clientX - drag.current.clientX,
+      y: drag.current.y + e.clientY - drag.current.clientY,
+    });
+  }
+  function finish() {
+    drag.current = null;
+  }
+  function crop() {
+    canvasRef.current.toBlob((blob) => onComplete(new File([blob], file.name, { type: "image/jpeg" })), "image/jpeg", 0.9);
+  }
+  return (
+    <div className="crop-backdrop" role="dialog" aria-modal="true" aria-label="Crop image">
+      <div className="crop-dialog">
+        <h2>Crop image</h2>
+        <p>Drag the image to frame it, then adjust the zoom.</p>
+        <canvas
+          ref={canvasRef}
+          className="crop-canvas"
+          onPointerDown={(e) => {
+            e.currentTarget.setPointerCapture(e.pointerId);
+            drag.current = { ...position, clientX: e.clientX, clientY: e.clientY };
+          }}
+          onPointerMove={move}
+          onPointerUp={finish}
+          onPointerCancel={finish}
+        />
+        <label>
+          Zoom
+          <input type="range" min="1" max="3" step="0.05" value={zoom} onChange={(e) => setZoom(Number(e.target.value))} />
+        </label>
+        <div className="actions">
+          <button type="button" className="secondary" onClick={onCancel}>Cancel</button>
+          <button type="button" disabled={!image} onClick={crop}>Use cropped image</button>
+        </div>
+      </div>
+    </div>
+  );
+}
 function ImageField({ value, onChange, token, title }) {
   const [busy, setBusy] = useState(false),
-    [error, setError] = useState("");
+    [error, setError] = useState(""),
+    [cropFile, setCropFile] = useState(null);
   async function upload(e) {
     const file = e.target.files[0];
     if (!file) return;
@@ -81,8 +150,13 @@ function ImageField({ value, onChange, token, title }) {
       setError("Maximum image size is 4 MB");
       return;
     }
-    setBusy(true);
     setError("");
+    setCropFile(file);
+    e.target.value = "";
+  }
+  async function uploadCropped(file) {
+    setBusy(true);
+    setCropFile(null);
     try {
       const data = await new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -123,6 +197,40 @@ function ImageField({ value, onChange, token, title }) {
         />
       </label>
       {error && <p role="alert">{error}</p>}
+      {cropFile && (
+        <CropDialog
+          file={cropFile}
+          onComplete={uploadCropped}
+          onCancel={() => setCropFile(null)}
+        />
+      )}
+    </div>
+  );
+}
+function RichTextField({ value, onChange }) {
+  const ref = React.useRef(null);
+  useEffect(() => {
+    if (ref.current && ref.current.innerHTML !== value) ref.current.innerHTML = value;
+  }, [value]);
+  function command(name, argument) {
+    ref.current.focus();
+    document.execCommand(name, false, argument);
+    onChange(ref.current.innerHTML);
+  }
+  function link() {
+    const url = window.prompt("Enter a URL or internal path", "/properties/");
+    if (url) command("createLink", url);
+  }
+  return (
+    <div className="rich-editor">
+      <div className="rich-toolbar" role="toolbar" aria-label="Text formatting">
+        <button type="button" className="quiet" onClick={() => command("bold")} aria-label="Bold"><strong>B</strong></button>
+        <button type="button" className="quiet" onClick={() => command("italic")} aria-label="Italic"><em>I</em></button>
+        <button type="button" className="quiet" onClick={() => command("insertUnorderedList")} aria-label="Bulleted list">•</button>
+        <button type="button" className="quiet" onClick={() => command("insertOrderedList")} aria-label="Numbered list">1.</button>
+        <button type="button" className="quiet" onClick={link} aria-label="Insert link">Link</button>
+      </div>
+      <div ref={ref} className="rich-input" contentEditable suppressContentEditableWarning onInput={(e) => onChange(e.currentTarget.innerHTML)} />
     </div>
   );
 }
@@ -286,11 +394,7 @@ function Fields({ value, onChange, token, fieldKey = "" }) {
             <label key={key} className={multiline ? "full" : ""}>
               {label(key)}
               {multiline ? (
-                <textarea
-                  rows={4}
-                  value={val}
-                  onChange={(e) => change(e.target.value)}
-                />
+                <RichTextField value={val} onChange={change} />
               ) : (
                 <input
                   type={typeof val === "number" ? "number" : "text"}
@@ -317,7 +421,8 @@ function Login({ onLogin }) {
   return (
     <div className="admin-login">
       <a href="/" className="brand">
-        ONE FRACXN
+        <img src="/assets/img/new-home/logo.svg" alt="OneFracxn" />
+        <span>ONE FRACXN</span>
       </a>
       <form
         onSubmit={async (e) => {
@@ -460,7 +565,8 @@ export default function Admin() {
     <div className="admin-shell">
       <aside className="admin-sidebar">
         <a className="brand" href="/">
-          ONE FRACXN
+          <img src="/assets/img/new-home/logo.svg" alt="OneFracxn" />
+          <span>ONE FRACXN</span>
         </a>
         <p className="eyebrow">CONTENT STUDIO</p>
         <nav>

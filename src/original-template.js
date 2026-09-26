@@ -19,14 +19,41 @@ function image(el, src, alt) {
     if (alt) el.setAttribute("alt", alt);
   }
 }
-function paragraphs(container, value) {
+function richText(container, value) {
   if (!container) return;
-  container.replaceChildren();
-  for (const line of (value || "").split(/\n\s*\n/)) {
-    const p = container.ownerDocument.createElement("p");
-    p.textContent = line;
-    container.append(p);
-  }
+  const source = String(value || ""),
+    document = container.ownerDocument,
+    parsed = document.implementation.createHTMLDocument("rich text");
+  parsed.body.innerHTML = /<\/?[a-z][\s\S]*>/i.test(source)
+    ? source
+    : source
+        .split(/\n\s*\n/)
+        .filter(Boolean)
+        .map((line) => `<p>${line.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")}</p>`)
+        .join("");
+  const allowed = new Set(["P", "BR", "STRONG", "B", "EM", "I", "UL", "OL", "LI", "A"]);
+  parsed.body.querySelectorAll("*").forEach((element) => {
+    if (!allowed.has(element.tagName)) {
+      element.replaceWith(document.createTextNode(element.outerHTML));
+      return;
+    }
+    [...element.attributes].forEach((attribute) => {
+      if (element.tagName !== "A" || attribute.name !== "href")
+        element.removeAttribute(attribute.name);
+    });
+    if (element.tagName === "A") {
+      const href = element.getAttribute("href") || "";
+      if (!/^(?:https?:\/\/|\/|#)/i.test(href)) element.removeAttribute("href");
+      else {
+        element.setAttribute("rel", "noopener noreferrer");
+        element.setAttribute("target", href.startsWith("/") || href.startsWith("#") ? "_self" : "_blank");
+      }
+    }
+  });
+  container.replaceChildren(...[...parsed.body.childNodes].map((node) => document.importNode(node, true)));
+}
+function paragraphs(container, value) {
+  richText(container, value);
 }
 function repeat(container, template, values, update) {
   if (!container || !template) return;
@@ -68,7 +95,7 @@ function editSection(section, data) {
   section.hidden = !data.visible;
   if (!data.visible) section.style.display = "none";
   text(section, "h2", data.title);
-  text(section, ".section-heading p", data.body);
+  richText(section.querySelector(".section-heading p"), data.body);
   if (data.image) image(section.querySelector("img"), data.image, data.title);
   const selector = section.querySelector(".testimonials-item")
     ? ".testimonials-item"
@@ -84,7 +111,7 @@ function editSection(section, data) {
       first.closest(".testimonials-slide, .partners-slide, .col-md-6") || first;
     repeat(wrapper.parentElement, wrapper, data.items, (node, item) => {
       text(node, "h6, a.fw-semibold", item.title);
-      text(node, "p", item.body);
+      richText(node.querySelector("p"), item.body);
       image(node.querySelector("img"), item.image, item.title);
     });
   } else {
@@ -94,7 +121,7 @@ function editSection(section, data) {
       if (!heading) return;
       heading.textContent = item.title;
       if (heading.nextElementSibling?.tagName === "P")
-        heading.nextElementSibling.textContent = item.body;
+        richText(heading.nextElementSibling, item.body);
       image(heading.parentElement.querySelector("img"), item.image, item.title);
     });
   }
@@ -113,7 +140,7 @@ function faqs(container, items, prefix) {
     trigger.classList.add("collapsed");
     body.id = id;
     body.classList.remove("show");
-    text(body, "p", item.answer);
+    richText(body.querySelector("p"), item.answer);
   });
 }
 function navigation(doc, data) {
