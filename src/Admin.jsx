@@ -234,7 +234,8 @@ function RichTextField({ value, onChange }) {
     </div>
   );
 }
-function Fields({ value, onChange, token, fieldKey = "" }) {
+function Fields({ value, onChange, token, fieldKey = "", newsItems = false }) {
+  const hasNewsLinks = newsItems || value?.title === "In the News";
   if (Array.isArray(value))
     return (
       <div className="array-editor">
@@ -290,11 +291,16 @@ function Fields({ value, onChange, token, fieldKey = "" }) {
                   {item.title || item.question || item.label || `item ${i + 1}`}
                 </summary>
                 <Fields
-                  value={item}
+                  value={
+                    hasNewsLinks && item && !("link" in item)
+                      ? { ...item, link: "" }
+                      : item
+                  }
                   onChange={(v) =>
                     onChange(value.map((x, j) => (j === i ? v : x)))
                   }
                   token={token}
+                  newsItems={hasNewsLinks}
                 />
               </details>
             ) : fieldKey === "gallery" ? (
@@ -346,6 +352,7 @@ function Fields({ value, onChange, token, fieldKey = "" }) {
                   onChange={change}
                   token={token}
                   fieldKey={key}
+                  newsItems={hasNewsLinks}
                 />
               </fieldset>
             );

@@ -82,6 +82,17 @@ test("selected properties use original card HTML in selected order without place
   assert.equal(listing.querySelectorAll("[data-property-search]").length, 7);
   assert.ok(listing.querySelector("[data-property-filter]"));
 });
+test("homepage news logos use their configured external links", () => {
+  const data = structuredClone(seed),
+    news = data.home.sections.find((section) => section.id === "section-9");
+  news.items[0].link = "https://news.example.com/onefracxn";
+  const doc = parse(buildOriginalPage(data).html),
+    link = doc.querySelector(".news-slider .partners-items a");
+  assert.equal(link.href, "https://news.example.com/onefracxn");
+  assert.equal(link.target, "_blank");
+  assert.equal(link.rel, "noopener noreferrer");
+  assert.equal(link.querySelector("img").getAttribute("src"), "/assets/img/icons/news-1.png");
+});
 test("property page uses original gallery, accordions and a persisted enquiry form", () => {
   const data = structuredClone(seed);
   data.properties[0].title = "New property";

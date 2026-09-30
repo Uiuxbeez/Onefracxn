@@ -19,6 +19,11 @@ function image(el, src, alt) {
     if (alt) el.setAttribute("alt", alt);
   }
 }
+function safeLink(value) {
+  return /^https:\/\/[^\s]+$/.test(value || "") ||
+    (/^\/(?!\/)[^\s]*$/.test(value || "")) ||
+    /^#[\w-]+$/.test(value || "");
+}
 function richText(container, value) {
   if (!container) return;
   const source = String(value || ""),
@@ -113,6 +118,19 @@ function editSection(section, data) {
       text(node, "h6, a.fw-semibold", item.title);
       richText(node.querySelector("p"), item.body);
       image(node.querySelector("img"), item.image, item.title);
+      if (selector === ".partners-items") {
+        const logo = node.querySelector(".partners-items img");
+        if (logo && safeLink(item.link)) {
+          const anchor = node.ownerDocument.createElement("a");
+          anchor.href = item.link;
+          if (/^https:\/\//.test(item.link)) {
+            anchor.target = "_blank";
+            anchor.rel = "noopener noreferrer";
+          }
+          logo.replaceWith(anchor);
+          anchor.append(logo);
+        }
+      }
     });
   } else {
     const headings = [...section.querySelectorAll("h5, h6")];

@@ -16,7 +16,20 @@ export const url = z
       /^https:\/\/[^\s]+$/.test(v),
     "Use an HTTPS URL or an existing image path",
   );
-const item = z.object({ title: short, body: text, image: url });
+const link = z.string().max(2000).refine(
+  (v) =>
+    !v ||
+    /^https:\/\/[^\s]+$/.test(v) ||
+    /^\/(?!\/)[^\s]*$/.test(v) ||
+    /^#[\w-]+$/.test(v),
+  "Use an HTTPS URL or an internal site path",
+);
+const item = z.object({
+  title: short,
+  body: text,
+  image: url,
+  link: link.optional().default(""),
+});
 const section = z.object({
   id: short.min(1),
   title: short,
